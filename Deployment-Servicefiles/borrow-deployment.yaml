@@ -21,6 +21,7 @@ spec:
       containers:
       - name: borrow-container
         image: vadlakondadocker24/mcaregistry:borrowimage
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 5000
