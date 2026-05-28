@@ -21,6 +21,7 @@ spec:
       containers:
       - name: auth-container
         image: vadlakondadocker24/mcaregistry:authimage
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 5000
