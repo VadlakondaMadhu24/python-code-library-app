@@ -21,6 +21,7 @@ spec:
       containers:
       - name: app-container
         image: vadlakondadocker24/mcaregistry:appimage
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 5000
