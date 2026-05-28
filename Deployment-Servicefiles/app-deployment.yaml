@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: app-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: mainapp
+
+  template:
+    metadata:
+      labels:
+        app: mainapp
+
+    spec:
+      containers:
+      - name: app-container
+        image: vadlakondadocker24/mcaregistry:appimage
+
+        ports:
+        - containerPort: 5000
+
+        env:
+        - name: AUTH_SERVICE
+          value: auth-service
+
+        - name: BOOK_SERVICE
+          value: book-service
+
+        - name: BORROW_SERVICE
+          value: borrow-service
