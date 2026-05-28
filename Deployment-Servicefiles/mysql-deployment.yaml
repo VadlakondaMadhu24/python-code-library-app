@@ -21,6 +21,7 @@ spec:
       containers:
       - name: mysql-container
         image: vadlakondadocker24/mcaregistry:dbimage
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 3306
