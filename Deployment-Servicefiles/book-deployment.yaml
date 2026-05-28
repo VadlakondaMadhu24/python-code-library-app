@@ -21,6 +21,7 @@ spec:
       containers:
       - name: book-container
         image: vadlakondadocker24/mcaregistry:bookimage
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 5000
