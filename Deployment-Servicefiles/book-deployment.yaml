@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: book-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: book
+
+  template:
+    metadata:
+      labels:
+        app: book
+
+    spec:
+      containers:
+      - name: book-container
+        image: vadlakondadocker24/mcaregistry:bookimage
+
+        ports:
+        - containerPort: 5000
+
+        env:
+        - name: DB_HOST
+          value: mysql-service
+
+        - name: DB_USER
+          value: root
+
+        - name: DB_PASSWORD
+          value: root
