@@ -24,7 +24,7 @@ spec:
         imagePullPolicy: Always
 
         ports:
-        - containerPort: 5001
+        - containerPort: 5000
 
         env:
         - name: AUTH_SERVICE
