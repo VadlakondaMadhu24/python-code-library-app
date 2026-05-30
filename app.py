@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
 
-AUTH_URL = "http://auth-service:5001"
+AUTH_URL = "http://auth-service:5000"
 BOOK_URL = "http://book-service:5002"
 BORROW_URL = "http://borrow-service:5003"
 
